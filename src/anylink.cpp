@@ -21,7 +21,7 @@ AnyLink::AnyLink(QWidget *parent)
     ui->setupUi(this);
 #ifndef Q_OS_MACOS
     layout()->removeItem(ui->topSpacer);
-    setWindowFlags(Qt::Dialog | Qt::WindowStaysOnTopHint | Qt::WindowMinimizeButtonHint);
+    setWindowFlags(Qt::Dialog | Qt::WindowStaysOnTopHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 #else
     setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinimizeButtonHint
                    | Qt::WindowCloseButtonHint | Qt::WindowStaysOnTopHint);
