@@ -92,7 +92,8 @@ void AnyLink::closeEvent(QCloseEvent *event)
             trayIcon->show();
         }
     } else {
-        qApp->quit();
+        //qApp->quit();
+        hide();
     }
 }
 
@@ -102,11 +103,6 @@ void AnyLink::showEvent(QShowEvent *event)
         QTimer::singleShot(50, this, [this]() { afterShowOneTime(); });
     }
     event->accept();
-}
-
-void AnyLink::showMinimized()
-{
-    this->hide();
 }
 
 void AnyLink::center()
