@@ -104,6 +104,11 @@ void AnyLink::showEvent(QShowEvent *event)
     event->accept();
 }
 
+void AnyLink::showMinimized()
+{
+    this->hide();
+}
+
 void AnyLink::center()
 {
     QRect screenGeometry = screen()->geometry();
