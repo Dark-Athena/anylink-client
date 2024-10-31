@@ -85,16 +85,15 @@ AnyLink::~AnyLink() { delete ui; }
 
 void AnyLink::closeEvent(QCloseEvent *event)
 {
-    if(m_vpnConnected) {
+  //  if(m_vpnConnected) {
         hide();
         event->accept();
         if(!trayIcon->isVisible()) {
             trayIcon->show();
-        }
-    } else {
-        //qApp->quit();
-        hide();
-    }
+          }
+  //  } else {
+  //      qApp->quit();
+  //  }
 }
 
 void AnyLink::showEvent(QShowEvent *event)
